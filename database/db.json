@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "name": "Geralt",
+      "price": "70",
+      "image": "/assets/geralt.webp",
+      "id": 1
+    },
+    {
+      "name": "Severus Snape",
+      "price": "70",
+      "image": "/assets/SeverusSnape.webp",
+      "id": 2
+    },
+    {
+      "name": "The Queen's Gambit",
+      "price": "70",
+      "image": "/assets/thequeensGambit.webp",
+      "id": 3
+    },
+    {
+      "name": "Bartigula",
+      "price": "70",
+      "image": "/assets/bartigula.webp",
+      "id": 4
+    },
+    {
+      "name": "Vecna",
+      "price": "70",
+      "image": "/assets/Vecna.webp",
+      "id": 5
+    },
+    {
+      "name": "Neo",
+      "price": "70",
+      "image": "/assets/Neo.webp",
+      "id": 6
+    },
+    {
+      "name": "Voldemort",
+      "price": "70",
+      "image": "/assets/LordVoldemort.webp",
+      "id": 7
+    },
+    {
+      "name": "Groot",
+      "price": "70",
+      "image": "/assets/groot.webp",
+      "id": 8
+    }
+  ]
+}

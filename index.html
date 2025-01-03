@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Indie+Flower&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="/assets/aluraIcon.png" class="icono icono-alura" alt="Icono" /><p class="titulo-alurageek">AluraGeek</p>
+    </header>
+    <main class="main-container">
+      <section>
+        <h1 class="titulo">Productos disponibles</h1>
+        <div data-product class="products-container">
+          <!--
+                <div class="img-container">
+                    <img src="https://www.playgames.cl/collections/funko-pop/products/funko-pop-netflix-the-witcher-geralt" alt="imagen producto">
+            2px;</div>
+                <div class="card-container--info">
+                    <p>Geralt</p>
+                    <div class="card-container--value">
+                        <p>$70</p>
+                        <button class="delete-button" data-id="${id}">
+                            <img src="./assets/trash.svg" alt="Eliminar">
+                        </button>
+                    </div>
+                </div>
+                -->
+        </div>
+      </section>
+      <section>
+        <h1>Agregar Producto:</h1>
+        <form class="form-container" data-form>
+          <input type="text" data-name placeholder="nombre..." />
+          <input type="text" data-price placeholder="precio..." />
+          <input type="text" data-image placeholder="imagen..." />
+          <span data-mensage class="mensageError"></span>
+          <div class="button-container">
+            <button type="submit" class="button-submit" id="button">
+              Enviar
+            </button>
+            <button type="reset" class="button-clear" id="button">
+              limpiar lista
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer-container">
+      <img src="" alt="" />
+      <p>Desarrollado por Debora Cantuarias</p>
+    </footer>
+    <script type="module" src="/js/controllers/main.js"></script>
+  </body>
+</html>
