@@ -14,7 +14,7 @@ body {
 .header {
   width: 100%;
   padding: 15px;
-  background-color: #1e1e1e;
+  background: linear-gradient(to right, #6441a5, #2a0845);
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -91,9 +91,8 @@ body {
 .add-button {
     background: none;
     border: none;
-    cursor: pointer;
   }
-.form-container {
+.ul-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -106,17 +105,10 @@ body {
   margin-right: 60px;
   padding-right: 60px;
 }
-.form-container input {
-  padding: 10px;
-  border: 1px solid #444;
-  border-radius: 4px;
-  background-color: #2a2a2a;
-  color: #ffffff;
-  width: 100%;
+li{
+    list-style-type: none;
 }
-.form-container input::placeholder {
-  color: #888;
-}
+
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -155,3 +147,33 @@ body {
 @media screen and (max-width: 960px)*/
 /*estilo para mobiles
 @media screen and (max-width: 600px)*/
+
+.selected-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+ /* Asegúrate de que esta clase exista y esté correctamente configurada */
+.card-small {
+    width: 50%;  /* Reduce el tamaño al 50% */
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-small .img-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-small .card-container--info {
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  
+  

@@ -19,39 +19,22 @@
     <main class="main-container">
       <section>
         <h1 class="titulo">Productos disponibles</h1>
-        <div data-product class="products-container">
-          <!--
-                <div class="img-container">
-                    <img src="https://www.playgames.cl/collections/funko-pop/products/funko-pop-netflix-the-witcher-geralt" alt="imagen producto">
-            2px;</div>
-                <div class="card-container--info">
-                    <p>Geralt</p>
-                    <div class="card-container--value">
-                        <p>$70</p>
-                        <button class="delete-button" data-id="${id}">
-                            <img src="./assets/trash.svg" alt="Eliminar">
-                        </button>
-                    </div>
-                </div>
-                -->
-        </div>
+        <div data-product class="products-container"></div>
       </section>
       <section>
         <h1>Agregar Producto:</h1>
-        <form class="form-container" data-form>
-          <input type="text" data-name placeholder="nombre..." />
-          <input type="text" data-price placeholder="precio..." />
-          <input type="text" data-image placeholder="imagen..." />
-          <span data-mensage class="mensageError"></span>
-          <div class="button-container">
-            <button type="submit" class="button-submit" id="button">
-              Enviar
-            </button>
-            <button type="reset" class="button-clear" id="button">
-              limpiar lista
-            </button>
+        <div class="ul-container" data-ul>
+            <ul id="lista-productos"></ul> <!-- Aquí se agregarán los productos seleccionados -->
+            <span data-mensage class="mensageError"></span>
+            <div class="button-container">
+              <button type="submit" class="button-submit" id="button">
+                Enviar
+              </button>
+              <button type="reset" class="button-clear" id="button">
+                limpiar lista
+              </button>
+            </div>
           </div>
-        </form>
       </section>
     </main>
     <footer class="footer-container">
