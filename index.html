@@ -17,25 +17,20 @@
       <img src="/assets/aluraIcon.png" class="icono icono-alura" alt="Icono" /><p class="titulo-alurageek">AluraGeek</p>
     </header>
     <main class="main-container">
-      <section>
-        <h1 class="titulo">Productos disponibles</h1>
-        <div data-product class="products-container"></div>
-      </section>
-      <section>
-        <h1>Agregar Producto:</h1>
-        <div class="ul-container" data-ul>
-            <ul id="lista-productos"></ul> <!-- Aquí se agregarán los productos seleccionados -->
-            <span data-mensage class="mensageError"></span>
+        <section>
+            <h1 class="titulo">Productos disponibles</h1>
+            <div data-product class="products-container"></div>
+          </section>
+          <section class="selected-products-section">
+            <h1>Productos seleccionados:</h1>
+            <ul id="lista-productos" class="ul-container"></ul>
+            <span data-mensaje class="mensaje-error"></span>
             <div class="button-container">
-              <button type="submit" class="button-submit" id="button">
-                Enviar
-              </button>
-              <button type="reset" class="button-clear" id="button">
-                limpiar lista
-              </button>
+              <button type="submit" class="button-submit" id="send-button">Enviar</button>
+              <button type="reset" class="button-clear" id="clear-button">Limpiar lista</button>
             </div>
-          </div>
-      </section>
+          </section>
+          
     </main>
     <footer class="footer-container">
       <img src="" alt="" />

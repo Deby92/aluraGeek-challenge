@@ -1,7 +1,7 @@
 import { servicesProducts } from "../services/product-services.js";
 
 const productContainer = document.querySelector("[data-product]");
-const selectedProductsContainer = document.querySelector("#lista-productos");
+const selectedProductsContainer = document.querySelector("#lista-productos"); // Seleccionamos el ul que ya está en el HTML
 
 function createCard({ name, price, image, id }, isSmall = false) {
   const card = document.createElement("li"); 
@@ -28,9 +28,9 @@ function createCard({ name, price, image, id }, isSmall = false) {
         </div>
     </div>
   `;
-
   return card;
 }
+
 
 const renderProducts = async () => {
   try {
@@ -56,6 +56,9 @@ const addEventListeners = () => {
       addProductToSelection(productId); 
     }
   });
+  document.querySelector("#clear-button").addEventListener("click", () => {
+    selectedProductsContainer.innerHTML = "";
+  });
 
   selectedProductsContainer.addEventListener("click", (event) => {
     const deleteButton = event.target.closest(".delete-button");
@@ -69,20 +72,23 @@ const addEventListeners = () => {
 const addProductToSelection = async (id) => {
     try {
       const products = await servicesProducts.productList();
-      const productToAdd = products.find((product) => product.id === id);
+      console.log("Productos disponibles:", products);
+      const productToAdd = products.find((product) => product.id === parseInt(id));
+      console.log("Producto encontrado:", productToAdd);
   
       if (productToAdd) {
-        console.log("Producto agregado:", productToAdd); 
         const existingCard = selectedProductsContainer.querySelector(
           `[data-id="${id}"]`
         );
         if (!existingCard) {
-          const newCard = createCard(productToAdd, true); 
+          const newCard = createCard(productToAdd, true);
           selectedProductsContainer.appendChild(newCard);
-          addDeleteEventListener(newCard);
+          console.log("Tarjeta agregada al DOM:", newCard);
         } else {
           console.warn("El producto ya está en la lista seleccionada.");
         }
+      } else {
+        console.error("Producto no encontrado para el ID:", id);
       }
     } catch (error) {
       console.error("Error al agregar producto:", error);
