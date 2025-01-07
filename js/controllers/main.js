@@ -115,18 +115,18 @@ const sendButton = document.querySelector("#send-button");
 const handleSendClick = (event) => {
   event.preventDefault();
   Swal.fire({
-    title: "¿Estás seguro?",
+    title: "¿Estás seguro de tu compra?",
     text: "Se enviarán los datos seleccionados.",
     icon: "question",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Sí, enviar",
+    confirmButtonText: "Sí, comprar",
     cancelButtonText: "Cancelar",
   }).then((result) => {
     if (result.isConfirmed) {
       selectedProductsContainer.innerHTML = "";
-      Swal.fire("¡Enviado!", "Los productos han sido enviados correctamente.", "success");
+      Swal.fire("¡Compra lista!", "Se ha realizado la compra correctamente.", "success");
       console.log("Productos enviados y la lista ha sido vaciada.");
     } else {
       console.log("Acción cancelada por el usuario.");
