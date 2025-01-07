@@ -1,1 +1,4 @@
-aluraGeek.challenge
+
+Precentacion proyecto aluraGeek.challenge 
+!/assets/demo.png
+
