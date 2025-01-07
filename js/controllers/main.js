@@ -116,7 +116,7 @@ const handleSendClick = (event) => {
   event.preventDefault();
   Swal.fire({
     title: "¿Estás seguro de tu compra?",
-    text: "Se enviarán los datos seleccionados.",
+    text: "Se enviarán los datos   seleccionados.",
     icon: "question",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
