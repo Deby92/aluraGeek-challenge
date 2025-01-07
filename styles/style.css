@@ -93,7 +93,7 @@ body {
   border: none;
 }
 .ul-container {
-  margin-right: 60px;
+  margin-right: 1px;
   padding-right: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -107,33 +107,39 @@ body {
 li {
   list-style-type: none;
 }
+#lista-productos {
+  flex-grow: 1; /* Permite que este contenedor crezca para ocupar el espacio restante */
+  overflow-y: auto; /* Agrega un scroll vertical si hay muchos elementos */
+  margin-bottom: 10px; /* Espacio entre la lista y los botones */
+  padding: 5px;
+  background-color: #202020;
+  border-radius: 4px;
+  border: 1px solid #555;
+}
 
 .button-container {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: space-between; /* Separa los botones horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
   align-self: flex-end;
 }
 
 .button-submit,
 .button-clear {
-    font-family: "Indie Flower", serif;
+  font-family: "Indie Flower", serif;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   color: #ffffff;
-  align-self: flex-end;
 }
 
 .button-submit {
   background-color: #007bff;
-  
 }
 
 .button-clear {
   background-color: #dc3545;
-  
 }
 
 .footer-container {
@@ -154,18 +160,59 @@ li {
 
 .selected-products-section {
   border: 1px solid #ccc;
-  padding: 2px;
-  margin-top: 100px;
   background-color: #333535;
   color: #007bff;
-  height: 600px;
-  margin-right: 2px;
+  width: 100%;
+  max-width: 500px; /* Define un ancho máximo */
+  height: 400px; /* Mantén una altura fija */
+  margin: 100px auto; /* Centra la sección horizontalmente */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacia los elementos internos */
 }
-
+.selected-products-section .img-container {
+  width: 100%;
+  height: 150px; /* Reducido a la mitad */
+  overflow: hidden;
+  border: 2px solid #007bff; /* Borde distintivo */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #1a1a1a; 
+}
+.selected-products-section .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
 .card-small {
   width: 100%;
-  height: 500px;
+  height: 250px;
 }
 element.style{
     margin:initial
+}
+.selected-products-section .card {
+  background-color: #282828; /* Fondo oscuro para la tarjeta */
+  border: 2px solid #555; /* Borde secundario */
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para hover */
+}
+.selected-products-section .card:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Más sombra en hover */
+}
+.selected-products-section .card-container--info p {
+  color: #ffffff; /* Texto blanco */
+  font-weight: bold;
+  margin-bottom: auto;
+  margin-top: 1px;
+}
+
+/* Valores y precios */
+.selected-products-section .card-container--value p {
+  color: #00ff7f; /* Color destacado para los precios */
+  font-size: 16px;
 }

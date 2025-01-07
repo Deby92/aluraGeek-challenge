@@ -1,7 +1,7 @@
 import { servicesProducts } from "../services/product-services.js";
 
 const productContainer = document.querySelector("[data-product]");
-const selectedProductsContainer = document.querySelector("#lista-productos"); // Seleccionamos el ul que ya está en el HTML
+const selectedProductsContainer = document.querySelector("#lista-productos");
 
 function createCard({ name, price, image, id }, isSmall = false) {
   const card = document.createElement("li"); 
@@ -19,7 +19,7 @@ function createCard({ name, price, image, id }, isSmall = false) {
             ${
               isSmall
                 ? `<button class="delete-button" data-id="${id}">
-                      <img src="./assets/trash-can-regular.svg" alt="Eliminar">
+                      <img src="./assets/trash-can-regular (3).svg" alt="Eliminar">
                   </button>`
                 : `<button class="add-button" data-id="${id}">
                       <img src="./assets/plus-solid.svg" alt="Agregar">
@@ -110,5 +110,30 @@ const addDeleteEventListener = (card) => {
     handleDeleteProduct(productId, selectedProductsContainer);
   });
 };
+
+const sendButton = document.querySelector("#send-button");
+const handleSendClick = (event) => {
+  event.preventDefault();
+  Swal.fire({
+    title: "¿Estás seguro?",
+    text: "Se enviarán los datos seleccionados.",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sí, enviar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      selectedProductsContainer.innerHTML = "";
+      Swal.fire("¡Enviado!", "Los productos han sido enviados correctamente.", "success");
+      console.log("Productos enviados y la lista ha sido vaciada.");
+    } else {
+      console.log("Acción cancelada por el usuario.");
+    }
+  });
+};
+sendButton.addEventListener("click", handleSendClick);
+
 
 renderProducts();
